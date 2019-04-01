@@ -14,6 +14,8 @@
 		C27F065D22527A880004DCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C27F065C22527A880004DCE9 /* Assets.xcassets */; };
 		C27F066022527A880004DCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27F065E22527A880004DCE9 /* LaunchScreen.storyboard */; };
 		C27F066822527CC40004DCE9 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F066722527CC40004DCE9 /* Reader.swift */; };
+		C2F64CF92252A2890097199D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F64CF82252A2890097199D /* CoreDataManager.swift */; };
+		C2F64CFB2252A7480097199D /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F64CFA2252A7480097199D /* HistoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		C27F065F22527A880004DCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C27F066122527A880004DCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C27F066722527CC40004DCE9 /* Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		C2F64CF82252A2890097199D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C2F64CFA2252A7480097199D /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +66,10 @@
 				C27F065422527A850004DCE9 /* ViewController.swift */,
 				C27F066722527CC40004DCE9 /* Reader.swift */,
 				C27F065622527A850004DCE9 /* Main.storyboard */,
+				C2F64CFA2252A7480097199D /* HistoryTableViewController.swift */,
 				C27F065C22527A880004DCE9 /* Assets.xcassets */,
 				C27F065E22527A880004DCE9 /* LaunchScreen.storyboard */,
+				C2F64CF82252A2890097199D /* CoreDataManager.swift */,
 				C27F066122527A880004DCE9 /* Info.plist */,
 				C27F065922527A850004DCE9 /* QRBarReader.xcdatamodeld */,
 			);
@@ -143,7 +149,9 @@
 			files = (
 				C27F065B22527A850004DCE9 /* QRBarReader.xcdatamodeld in Sources */,
 				C27F065522527A850004DCE9 /* ViewController.swift in Sources */,
+				C2F64CFB2252A7480097199D /* HistoryTableViewController.swift in Sources */,
 				C27F066822527CC40004DCE9 /* Reader.swift in Sources */,
+				C2F64CF92252A2890097199D /* CoreDataManager.swift in Sources */,
 				C27F065322527A850004DCE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

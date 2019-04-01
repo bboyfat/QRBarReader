@@ -13,7 +13,7 @@
         <!--History-->
         <scene sceneID="aUM-lm-waX">
             <objects>
-                <viewController id="sbU-s5-6LS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="historyVC" id="sbU-s5-6LS" customClass="HistoryTableViewController" customModule="QRBarReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tTQ-Yg-Uib">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,15 +22,19 @@
                                 <rect key="frame" x="0.0" y="67" width="414" height="746"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DBr-Tn-QsQ">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="66" id="DBr-Tn-QsQ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DBr-Tn-QsQ" id="CeM-2y-zHB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sbU-s5-6LS" id="a00-Di-ZEK"/>
+                                    <outlet property="delegate" destination="sbU-s5-6LS" id="EjP-WU-uD8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,10 +47,13 @@
                         <viewLayoutGuide key="safeArea" id="IE4-4u-bvT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" id="co3-s3-Aax"/>
+                    <connections>
+                        <outlet property="tableView" destination="26T-uy-9SX" id="aZG-rC-OjL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuh-8k-l83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156.52173913043478" y="290.625"/>
+            <point key="canvasLocation" x="155.07246376811597" y="290.625"/>
         </scene>
         <!--Scan-->
         <scene sceneID="ghr-gj-LUh">
@@ -70,7 +77,7 @@
                                     <action selector="startScanBtn:" destination="MMi-UC-OaO" eventType="touchUpInside" id="VYO-PN-sHT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ml-zL-9zL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ml-zL-9zL">
                                 <rect key="frame" x="20" y="194" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DO6-yg-Ch2"/>
