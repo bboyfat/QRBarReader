@@ -74,5 +74,28 @@ extension HistoryTableViewController: UITableViewDataSource{
 }
 
 extension HistoryTableViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (delete, indexPath) in
+            let story = self.history[indexPath.row]
+            
+            // remove history from tableView
+            
+            
+            self.history.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .middle)
+            
+            //remove history framo core data
+            let context = CoreDataManager.shared.persistentContainer.viewContext
+            
+            context.delete(story)
+            do{
+                try context.save()
+            } catch {
+                print("Can't save after delet")
+            }
+            
+        }
+        return [deleteAction]
+    }
     
 }
